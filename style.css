@@ -1,0 +1,173 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ body {
+   background: linear-gradient(45deg, #190361 0%, #bb00ff 100%);
+   animation: gradient 10s ease infinite;
+   background-size: 200% 200%;
+   display: grid;
+   min-height: 100vh;
+   place-content: center;
+ }
+ 
+
+ 
+ main {
+   background: white;
+   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+   border-radius: 5px;
+   text-align: center;
+ }
+ 
+
+ .screen1 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ 
+   padding: 48px 64px 64px;
+ }
+ 
+ h1 {
+   width: 258px;
+   font-family: "Montserrat", sans-serif;
+   color: #34355b;
+   font-size: 24px;
+   line-height: 29px;
+ 
+   margin-bottom: 17px;
+ }
+ 
+ p {
+   margin-bottom: 20px;
+ }
+ 
+ p,
+ button {
+   font-family: "DM Sans", sans-serif;
+   line-height: 20px;
+ }
+ 
+ .screen1 img {
+   background: none;
+   border: none;
+   cursor: pointer;
+ }
+ 
+ #clickCookie:hover {
+   animation: moveCookie 0.6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+ }
+ 
+ 
+ .screen2 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+ 
+   padding: 48px 64px;
+ }
+ 
+ .screen2 h1 {
+   width: 297px;
+ }
+ 
+ .message {
+   font-family: "Dancing Script", cursive;
+   font-size: 24px;
+   line-height: 29px;
+ 
+   width: 293px;
+   height: auto;
+   background: #e4edf1;
+   box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+   padding: 10px;
+   margin-bottom: 17px;
+   animation: messageCenter 1s normal;
+ }
+ 
+ .hide {
+   display: none;
+ }
+
+
+#openCookie{
+   color: white;
+   background:#FF9500;
+   border-radius: 4px;
+   padding: 16px;
+   gap: 10px;
+   margin-top: 30px;
+   transition: background .3s;
+   border: none;
+}
+
+
+
+#openCookie:hover {
+   background-color: #e68703;
+   
+}
+
+
+
+@keyframes gradient {
+   0% {
+     background-position: 0% 50%;
+   }
+   50% {
+     background-position: 100% 50%;
+   }
+   100% {
+     background-position: 0% 50%;
+   }
+ }
+ 
+
+ 
+ @keyframes moveCookie {
+   0%,
+   100% {
+     transform: rotate(0deg);
+     transform-origin: 50% 0;
+   }
+   10% {
+     transform: rotate(2deg);
+   }
+   20%,
+   40%,
+   60% {
+     transform: rotate(-4deg);
+   }
+   30%,
+   50%,
+   70% {
+     transform: rotate(4deg);
+   }
+   80% {
+     transform: rotate(-2deg);
+   }
+   90% {
+     transform: rotate(2deg);
+   }
+ }
+ 
+
+ 
+ @keyframes messageCenter {
+   0% {
+     transform: scale(0) translateY(400px);
+     opacity: 0;
+   }
+ 
+ 
+ 
+   100% {
+     transform: scale(1) translateY(0px);
+     opacity: 1;
+   }
+ }
